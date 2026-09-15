@@ -149,8 +149,8 @@ em { font-style: italic; color: var(--forest); }
   gap: 0.35rem;
 }
 .logo em { font-style: normal; color: var(--sand); }
-.logo-img { height: 2.4rem; width: auto; display: block; }
-.logo-img--footer { height: 2.1rem; }
+.logo-img { height: 4rem; width: auto; display: block; }
+.logo-img--footer { height: 3.2rem; }
 .nav { display: flex; align-items: center; gap: 1.8rem; }
 .nav a { font-size: 0.92rem; font-weight: 600; }
 .nav a:hover { color: var(--forest); }
@@ -184,8 +184,16 @@ em { font-style: italic; color: var(--forest); }
 }
 
 /* ---------- Hero ---------- */
-.hero { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
+.hero {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 0;
+  position: relative;
+  background:
+    radial-gradient(480px 480px at 96% 4%, rgba(218,184,128,0.32), rgba(218,184,128,0) 70%),
+    radial-gradient(380px 380px at 2% 96%, rgba(93,110,96,0.16), rgba(93,110,96,0) 70%);
+}
 .hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(2rem, 5vw, 4rem);
@@ -210,12 +218,50 @@ em { font-style: italic; color: var(--forest); }
 }
 .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 @media (max-width: 900px) { .hero__cta { justify-content: center; } }
+.btn--arrow span { display: inline-block; transition: transform 0.25s var(--ease); }
+.btn--arrow:hover span { transform: translateX(4px); }
+
+.hero__media { position: relative; margin-bottom: 1.5rem; }
+.hero__frame {
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  background: var(--sand);
+  border-radius: var(--radius);
+  z-index: 0;
+}
 .hero__media img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: var(--radius);
+}
+.hero__chip {
+  position: absolute;
+  z-index: 2;
+  left: 1.25rem;
+  bottom: -1.1rem;
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(35,39,34,0.18);
+}
+@media (max-width: 900px) {
+  .hero__chip { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+}
+
+/* Entrance animation — subtle, respects reduced motion */
+[data-reveal] { opacity: 0; transform: translateY(18px); animation: heroReveal 0.8s var(--ease) forwards; }
+.hero__inner[data-reveal] { animation-delay: 0.05s; }
+.hero__media[data-reveal] { animation-delay: 0.2s; }
+@keyframes heroReveal { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { animation: none; opacity: 1; transform: none; }
 }
 
 /* Clarity strip: answers "woran bin ich bei euch" at a glance */
