@@ -69,7 +69,7 @@ h1, h2, h3 {
   line-height: 1.12;
   margin: 0 0 0.55em;
 }
-h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); letter-spacing: 0.01em; }
+h1 { font-size: clamp(2.1rem, 4vw, 3.2rem); letter-spacing: 0.01em; white-space: pre-line; }
 h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
 h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.2rem; }
 p { margin: 0 0 1em; }
@@ -149,6 +149,8 @@ em { font-style: italic; color: var(--forest); }
   gap: 0.35rem;
 }
 .logo em { font-style: normal; color: var(--sand); }
+.logo-img { height: 2.4rem; width: auto; display: block; }
+.logo-img--footer { height: 2.1rem; }
 .nav { display: flex; align-items: center; gap: 1.8rem; }
 .nav a { font-size: 0.92rem; font-weight: 600; }
 .nav a:hover { color: var(--forest); }
@@ -183,14 +185,38 @@ em { font-style: italic; color: var(--forest); }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(3rem, 7vw, 5.5rem) 0 0; }
-.hero__inner { max-width: 780px; margin: 0 auto; text-align: center; }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+}
+.hero__inner { text-align: left; }
+@media (max-width: 900px) {
+  .hero__inner { text-align: center; }
+}
 .hero__sub {
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   color: rgba(35,39,34,0.78);
-  max-width: 620px;
-  margin: 0 auto 2.2rem;
+  max-width: 520px;
+  margin: 0 0 2.2rem;
 }
-.hero__cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.2rem; }
+@media (max-width: 900px) {
+  .hero__sub { margin-left: auto; margin-right: auto; }
+}
+.hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+@media (max-width: 900px) { .hero__cta { justify-content: center; } }
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
 
 /* Clarity strip: answers "woran bin ich bei euch" at a glance */
 .clarity {
@@ -260,6 +286,17 @@ em { font-style: italic; color: var(--forest); }
   font-weight: 600;
 }
 
+/* ---------- Einblick-Galerie ---------- */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+@media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } }
+.gallery__item { margin: 0; }
+.gallery__item img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 /* ---------- Ablauf ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; counter-reset: step; }
 @media (max-width: 980px) { .steps { grid-template-columns: 1fr 1fr; } }
@@ -302,14 +339,12 @@ em { font-style: italic; color: var(--forest); }
   aspect-ratio: 4/5;
   background: var(--cream);
   border-radius: var(--radius);
-  border: 2px dashed rgba(93,110,96,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(35,39,34,0.5);
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 1rem;
+  overflow: hidden;
+}
+.about__photo img { width: 100%; height: 100%; object-fit: cover; }
+[data-placeholder] {
+  border-bottom: 2px dashed var(--sand);
+  cursor: help;
 }
 .sister-note {
   display: inline-flex;

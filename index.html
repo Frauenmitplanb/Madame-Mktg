@@ -11,7 +11,7 @@
 <div class="demo-banner">🚧 DEMO – Website im Aufbau. Texte &amp; Bilder werden laufend ergänzt.</div>
 
 <header class="site-header">
-  <a href="index.html" class="logo">Madame <em>Mktg</em></a>
+  <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Madame Mktg" class="logo-img"></a>
   <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   <nav class="nav">
     <a href="#leistungen">Leistungen</a>
@@ -29,13 +29,18 @@
 
   <!-- HERO — Dienstleistungsseite: sofort klar, für wen / was / wie geht's weiter -->
   <section class="hero wrap">
-    <div class="hero__inner">
-      <span class="eyebrow">Online-Marketing-Agentur für Dienstleisterinnen &amp; Coaches</span>
-      <h1>Mehr Anfragen. Weniger Rätselraten.</h1>
-      <p class="hero__sub">Madame Mktg übernimmt Strategie, Content und Kampagnen für dein Business – damit du dich um deine Kund:innen kümmerst und nicht um Algorithmen.</p>
-      <div class="hero__cta">
-        <a href="#kontakt" class="btn">Kostenloses Erstgespräch buchen</a>
-        <a href="#leistungen" class="btn btn--outline">Leistungen ansehen</a>
+    <div class="hero__grid">
+      <div class="hero__inner">
+        <span class="eyebrow">Online-Marketing-Agentur für Dienstleisterinnen &amp; Coaches</span>
+        <h1>Mehr Anfragen.<br>Weniger Rätselraten.</h1>
+        <p class="hero__sub">Madame Mktg übernimmt Strategie, Content und Kampagnen für dein Business – damit du dich um deine Kund:innen kümmerst und nicht um Algorithmen.</p>
+        <div class="hero__cta">
+          <a href="#kontakt" class="btn">Kostenloses Erstgespräch buchen</a>
+          <a href="#leistungen" class="btn btn--outline">Leistungen ansehen</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="assets/images/hero-team.jpg" alt="Zusammenarbeit bei Madame Mktg" loading="eager">
       </div>
     </div>
 
@@ -135,6 +140,21 @@
     </div>
   </section>
 
+  <!-- EINBLICK -->
+  <section class="section wrap" id="einblick">
+    <div class="gallery">
+      <figure class="gallery__item">
+        <img src="assets/images/einblick-strategie.jpg" alt="Strategie- und Content-Planung bei Madame Mktg" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="assets/images/einblick-workspace.jpg" alt="Arbeitsplatz von Madame Mktg" loading="lazy">
+      </figure>
+      <figure class="gallery__item">
+        <img src="assets/images/einblick-checkliste.jpg" alt="Branding-Checkliste im Einsatz" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
   <!-- ABLAUF -->
   <section class="section wrap" id="ablauf">
     <div class="section-head section-head--center">
@@ -187,11 +207,13 @@
   <!-- ÜBER MICH -->
   <section class="section wrap" id="ueber-mich">
     <div class="about__grid">
-      <div class="about__photo">Foto folgt</div>
+      <div class="about__photo">
+        <img src="assets/images/ueber-uns.jpg" alt="Team von Madame Mktg" loading="lazy">
+      </div>
       <div>
-        <span class="eyebrow">Über mich</span>
-        <h2>Hinter Madame Mktg steht Julia</h2>
-        <p>Ich helfe Dienstleisterinnen und Coaches dabei, online sichtbar zu werden und planbar Anfragen zu bekommen – mit Strategie statt Zufall. Kein Agentur-Kauderwelsch, sondern klare Kommunikation auf Augenhöhe.</p>
+        <span class="eyebrow">Über uns</span>
+        <h2>Hinter Madame Mktg steht <span data-placeholder="Name ergänzen">XY</span></h2>
+        <p>Wir helfen Dienstleisterinnen und Coaches dabei, online sichtbar zu werden und planbar Anfragen zu bekommen – mit Strategie statt Zufall. Kein Agentur-Kauderwelsch, sondern klare Kommunikation auf Augenhöhe.</p>
         <div class="sister-note">👭 Madame Mktg ist die Marketing-Schwester von Frauen mit Plan B</div>
       </div>
     </div>
@@ -246,7 +268,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer__grid">
-    <span class="logo">Madame <em>Mktg</em></span>
+    <img src="assets/images/logo.png" alt="Madame Mktg" class="logo-img logo-img--footer">
     <div class="footer__links">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
