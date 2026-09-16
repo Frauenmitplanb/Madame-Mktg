@@ -11,16 +11,17 @@ Schwestermarke von „Frauen mit Plan B" – Farbwelt (`#5D6E60`, `#dab880`) und
 - `css/style.css`, `js/main.js` – Styles & Interaktion (Mobile-Nav, Cookie-Banner)
 - `assets/fonts/` – selbstgehostete Schrift (SIL Open Font License, kein Google-Fonts-Request)
 - `assets/images/` – Logo & Fotos (komprimiert, Original-Uploads bewusst nicht im Repo). Im Einsatz:
-  `logo.png` (Header/Footer), `ueber-uns.jpg` (Über uns),
+  `logo.png` (Header/Footer), `hero-team.jpg` (Hero-Hintergrund, siehe unten), `ueber-uns.jpg` (Über uns),
   `einblick-strategie.jpg` / `einblick-workspace.jpg` / `einblick-checkliste.jpg` (Bildstreifen).
-  Aktuell ungenutzt, aber verfügbar: `hero-team.jpg` (Hero läuft testweise mit animierter
-  SVG-Grafik statt Foto – siehe unten), `produkt-detail.jpg`, `social-detail.jpg`, `notizen-arbeit.jpg`.
+  Aktuell ungenutzt, aber verfügbar: `produkt-detail.jpg`, `social-detail.jpg`, `notizen-arbeit.jpg`.
 
-## Hero-Hintergrund (Test)
-Der Hero läuft aktuell mit einer selbstgebauten, animierten SVG-Grafik im Hintergrund
-(Wachstumskurve + dezente Icons, komplett CSS/SVG, kein Videofile) statt einem Foto –
-inline in `index.html`, Styles/Animationen unter „Hero" in `css/style.css`. Ein echtes
-Video kann jederzeit an gleicher Stelle eingesetzt werden, sobald eins vorliegt.
+## Hero-Hintergrund
+Der Hero läuft mit `hero-team.jpg` als volle-Breite-Hintergrund mit sehr langsamem,
+sanftem Dauer-Zoom (CSS-Animation, kein Videofile, daher kein zusätzliches Datengewicht).
+Ein radialer Schleier-Verlauf sorgt dafür, dass die Textzone in der Mitte klar lesbar bleibt
+und das Foto nur an den Rändern durchscheint. Styles/Animation unter „Hero" in `css/style.css`.
+Ein echtes Video kann jederzeit an gleicher Stelle eingesetzt werden (`.hero__bg-img` durch
+`<video>` ersetzen), sobald eins vorliegt.
 
 ## Offene Punkte vor Launch
 - [ ] Impressum-Pflichtangaben ergänzen (§ 5 DDG)

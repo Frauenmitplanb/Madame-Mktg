@@ -27,37 +27,11 @@
 
 <main>
 
-  <!-- HERO — Dienstleistungsseite: animierte Marketing-Grafik als dezenter Hintergrund,
+  <!-- HERO — Dienstleistungsseite: Foto als dezenter Hintergrund mit langsamem Zoom-Loop,
        Text zentriert und per Schleier-Verlauf geschützt (lesbar, nicht ablenkend) -->
   <section class="hero">
     <div class="hero__bg" aria-hidden="true">
-      <svg class="hero__svg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice">
-        <path class="hero__chart-fill" d="M60,560 C300,520 480,420 680,360 C880,300 1080,340 1280,220 C1400,150 1480,120 1540,60 L1540,650 L60,650 Z"/>
-        <path class="hero__chart-line" d="M60,560 C300,520 480,420 680,360 C880,300 1080,340 1280,220 C1400,150 1480,120 1540,60"/>
-        <g class="hero__dot" style="--d:0s">
-          <circle class="hero__dot-ring" cx="300" cy="510" r="6"/>
-          <circle class="hero__dot-core" cx="300" cy="510" r="6"/>
-        </g>
-        <g class="hero__dot" style="--d:0.7s">
-          <circle class="hero__dot-ring" cx="820" cy="330" r="6"/>
-          <circle class="hero__dot-core" cx="820" cy="330" r="6"/>
-        </g>
-        <g class="hero__dot" style="--d:1.4s">
-          <circle class="hero__dot-ring" cx="1360" cy="140" r="6"/>
-          <circle class="hero__dot-core" cx="1360" cy="140" r="6"/>
-        </g>
-        <g class="hero__icon hero__icon--a" transform="translate(180,160)">
-          <circle cx="0" cy="0" r="30"/>
-          <circle cx="0" cy="0" r="18"/>
-          <circle cx="0" cy="0" r="5" fill="currentColor" stroke="none"/>
-        </g>
-        <g class="hero__icon hero__icon--b" transform="translate(1180,510)">
-          <path d="M-22,-15 H14 a9 9 0 0 1 9 9 v10 a9 9 0 0 1 -9 9 H-4 l-14 11 v-11 h-4 a9 9 0 0 1 -9 -9 v-10 a9 9 0 0 1 9 -9 z"/>
-        </g>
-        <g class="hero__icon hero__icon--c" transform="translate(1470,360)">
-          <path d="M0,-18 L4.5,-4.5 L18,-4.5 L7,3.5 L11,17 L0,9 L-11,17 L-7,3.5 L-18,-4.5 L-4.5,-4.5 Z"/>
-        </g>
-      </svg>
+      <img class="hero__bg-img" src="assets/images/hero-team.jpg" alt="" loading="eager">
       <div class="hero__scrim"></div>
     </div>
 
