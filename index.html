@@ -27,9 +27,41 @@
 
 <main>
 
-  <!-- HERO — Dienstleistungsseite: sofort klar, für wen / was / wie geht's weiter -->
-  <section class="hero wrap">
-    <div class="hero__grid">
+  <!-- HERO — Dienstleistungsseite: animierte Marketing-Grafik als dezenter Hintergrund,
+       Text zentriert und per Schleier-Verlauf geschützt (lesbar, nicht ablenkend) -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <svg class="hero__svg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice">
+        <path class="hero__chart-fill" d="M60,560 C300,520 480,420 680,360 C880,300 1080,340 1280,220 C1400,150 1480,120 1540,60 L1540,650 L60,650 Z"/>
+        <path class="hero__chart-line" d="M60,560 C300,520 480,420 680,360 C880,300 1080,340 1280,220 C1400,150 1480,120 1540,60"/>
+        <g class="hero__dot" style="--d:0s">
+          <circle class="hero__dot-ring" cx="300" cy="510" r="6"/>
+          <circle class="hero__dot-core" cx="300" cy="510" r="6"/>
+        </g>
+        <g class="hero__dot" style="--d:0.7s">
+          <circle class="hero__dot-ring" cx="820" cy="330" r="6"/>
+          <circle class="hero__dot-core" cx="820" cy="330" r="6"/>
+        </g>
+        <g class="hero__dot" style="--d:1.4s">
+          <circle class="hero__dot-ring" cx="1360" cy="140" r="6"/>
+          <circle class="hero__dot-core" cx="1360" cy="140" r="6"/>
+        </g>
+        <g class="hero__icon hero__icon--a" transform="translate(180,160)">
+          <circle cx="0" cy="0" r="30"/>
+          <circle cx="0" cy="0" r="18"/>
+          <circle cx="0" cy="0" r="5" fill="currentColor" stroke="none"/>
+        </g>
+        <g class="hero__icon hero__icon--b" transform="translate(1180,510)">
+          <path d="M-22,-15 H14 a9 9 0 0 1 9 9 v10 a9 9 0 0 1 -9 9 H-4 l-14 11 v-11 h-4 a9 9 0 0 1 -9 -9 v-10 a9 9 0 0 1 9 -9 z"/>
+        </g>
+        <g class="hero__icon hero__icon--c" transform="translate(1470,360)">
+          <path d="M0,-18 L4.5,-4.5 L18,-4.5 L7,3.5 L11,17 L0,9 L-11,17 L-7,3.5 L-18,-4.5 L-4.5,-4.5 Z"/>
+        </g>
+      </svg>
+      <div class="hero__scrim"></div>
+    </div>
+
+    <div class="wrap">
       <div class="hero__inner" data-reveal>
         <span class="eyebrow">Online-Marketing-Agentur für Dienstleisterinnen &amp; Coaches</span>
         <h1>Mehr Anfragen.<br><em>Weniger Rätselraten.</em></h1>
@@ -39,30 +71,27 @@
           <a href="#leistungen" class="btn btn--outline">Leistungen ansehen</a>
         </div>
       </div>
-      <div class="hero__media" data-reveal>
-        <div class="hero__frame" aria-hidden="true"></div>
-        <img src="assets/images/hero-team.jpg" alt="Zusammenarbeit bei Madame Mktg" loading="eager">
-        <div class="hero__chip">✦ Strategie statt Zufall</div>
-      </div>
     </div>
 
-    <div class="clarity">
-      <div class="clarity__grid">
-        <div class="clarity__item">
-          <span class="clarity__label">Für wen</span>
-          <span class="clarity__value">Coaches, Beraterinnen &amp; Dienstleisterinnen</span>
-        </div>
-        <div class="clarity__item">
-          <span class="clarity__label">Format</span>
-          <span class="clarity__value">Einzelprojekt oder laufende Betreuung</span>
-        </div>
-        <div class="clarity__item">
-          <span class="clarity__label">Ablauf</span>
-          <span class="clarity__value">Erstgespräch → Angebot → Start in 1–2 Wochen</span>
-        </div>
-        <div class="clarity__item">
-          <span class="clarity__label">Vertrag</span>
-          <span class="clarity__value">Monatlich kündbar, kein Jahresvertrag</span>
+    <div class="wrap">
+      <div class="clarity">
+        <div class="clarity__grid">
+          <div class="clarity__item">
+            <span class="clarity__label">Für wen</span>
+            <span class="clarity__value">Coaches, Beraterinnen &amp; Dienstleisterinnen</span>
+          </div>
+          <div class="clarity__item">
+            <span class="clarity__label">Format</span>
+            <span class="clarity__value">Einzelprojekt oder laufende Betreuung</span>
+          </div>
+          <div class="clarity__item">
+            <span class="clarity__label">Ablauf</span>
+            <span class="clarity__value">Erstgespräch → Angebot → Start in 1–2 Wochen</span>
+          </div>
+          <div class="clarity__item">
+            <span class="clarity__label">Vertrag</span>
+            <span class="clarity__value">Monatlich kündbar, kein Jahresvertrag</span>
+          </div>
         </div>
       </div>
     </div>
